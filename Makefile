@@ -11,7 +11,7 @@ MKDIR = mkdir
 CHMOD = chmod
 CP = rsync -R
 # déclaration des options du compilateur
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 CPPFLAGS = -I.
 LDFLAGS = -lm  -lSDL2_ttf
 # définition des fichiers et dossiers
@@ -19,7 +19,7 @@ PROGNAME = compareAAS_DDA
 VERSION = 1.5
 distdir = $(PROGNAME)-$(VERSION)
 HEADERS = 
-SOURCES = compareAAS_DDA.c letemps.c drawdata.c draw.c
+SOURCES = compareAAS_DDA.c letemps.c drawdata.c draw.c algorithmes.c
 OBJ = $(SOURCES:.c=.o)
 DOXYFILE = documentation/Doxyfile
 EXTRAFILES = COPYING $(wildcard shaders/*.?s images/*.png)
